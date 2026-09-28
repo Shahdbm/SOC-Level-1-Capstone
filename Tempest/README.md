@@ -11,6 +11,7 @@ The goal was to reconstruct the attack from initial access through command-and-c
 A critical SOC alert indicated that a malicious Microsoft Word document had been downloaded and executed on a Windows host.
 
 The investigation focused on correlating endpoint and network evidence to understand the full attack chain.
+![Tempest Investigation Overview](01-tempest-overview.png)
 
 ## Data Sources
 
@@ -41,8 +42,10 @@ A persistence mechanism was established so the payload could execute again after
 
 ### 3. Command and Control
 Network analysis identified HTTP traffic to attacker-controlled infrastructure.
-
 The C2 communication used encoded data to exchange commands and command results.
+![Malicious HTTP Traffic](02-malicious-http-traffic.png)
+
+![C2 Traffic Analysis](03-c2-traffic.png)
 
 ### 4. Internal Reconnaissance
 The attacker performed host and privilege enumeration, discovered credentials, and identified internal services.
